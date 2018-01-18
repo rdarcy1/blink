@@ -312,4 +312,9 @@ class Blink implements ArrayAccess, Countable
             return in_array($key, $keys);
         }, ARRAY_FILTER_USE_KEY);
     }
+
+    public function prefix($prefix)
+    {
+        return new Prefixed($this, $prefix);
+    }
 }
